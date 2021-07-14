@@ -1,0 +1,46 @@
+{
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "files.autoSaveDelay": 500,
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/.git": true, // this is a default value
+    "**/.DS_Store": true, // this is a default value
+
+    //"**/node_modules": true, // this excludes all folders
+    // named "node_modules" from
+    // the explore tree
+
+    // alternative version
+    //"node_modules": true, // this excludes the folder
+    // only from the root of
+    // your workspace
+
+    // this excludes all folders
+    "**/build": true,
+    "build": true
+  },
+  "window.zoomLevel": 0,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "prettier.useTabs": true,
+  "prettier.singleQuote": true,
+  "cSpell.enableFiletypes": ["!javascript"],
+  "editor.fontLigatures": true,
+  "stylelint.enable": true
+}

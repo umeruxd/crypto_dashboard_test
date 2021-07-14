@@ -1,0 +1,13 @@
+@include media-breakpoint-down(md) {
+    #sidebar {
+        position: fixed;
+        width: 90%;
+        height: 100vh;
+        left: -100%;
+
+        &.active {
+            left: 0;
+            width: 100%;
+        }
+    }
+}

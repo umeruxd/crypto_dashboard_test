@@ -1,0 +1,260 @@
+$blue: #1d223d;
+$primary: $blue;
+$blue-1: #3b436d;
+$blue-2: #558bed;
+$blue-3: #878fbc;
+$blue-4: #d5e4ff;
+
+$darkgray: #212b36;
+$secondary: $darkgray;
+$darkgray-1: #454f5b;
+$darkgray-2: #637381;
+$darkgray-3: #919eab;
+
+$lightgray: #c4cdd5;
+$lightgray-1: #dfe3e8;
+$lightgray-2: #f4f6f8;
+$lightgray-3: #f9fafb;
+
+$success: #108043;
+
+$warning: #ffc64b;
+
+$danger: #fa6b82;
+
+$unit: 8px;
+
+$colors: (blue: $blue,
+  primary: $primary,
+  blue-1: $blue-1,
+  blue-2: $blue-2,
+  blue-3: $blue-3,
+  blue-4: $blue-4,
+  darkgray: $darkgray,
+  secondary: $secondary,
+  darkgray-1: $darkgray-1,
+  darkgray-2: $darkgray-2,
+  darkgray-3: $darkgray-3,
+  lightgray: $lightgray,
+  lightgray-1: $lightgray-1,
+  lightgray-2: $lightgray-2,
+  lightgray-3: $lightgray-3,
+  success: $success,
+  warning: $warning,
+  danger: $danger,
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(('blue': map-get($colors, blue),
+    'darkgray': map-get($colors, darkgray)),
+  $theme-colors);
+
+@each $colorKey,
+$colorName in $colors {
+  .text-#{$colorKey} {
+    color: $colorName !important;
+  }
+
+  .bg-#{$colorKey} {
+    background-color: $colorName !important;
+  }
+
+  .btn-#{$colorKey} {
+    color: $colorName !important;
+    background: rgba($colorName, 0.1) !important;
+
+    &:hover,
+    &:focus {
+      background: rgba($colorName, 0.3) !important;
+    }
+  }
+}
+
+.btn-lightgray-3 {
+  border: 1px solid $lightgray;
+  color: $darkgray-2 !important;
+}
+
+@mixin badgeVariant($color) {
+  background-color: rgba($color, 0.1);
+  color: $color;
+}
+
+.badge {
+  border: 1px solid;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 4px 2px 2px;
+
+  &-text {
+    margin-left: 2px;
+  }
+
+  svg,
+  img {
+    width: 12px;
+    height: 12px;
+  }
+
+  &-primary {}
+
+  &-secondary {}
+
+  &-success {
+    @include badgeVariant($success)
+  }
+
+  &-danger {}
+
+  &-warning {}
+
+  &-info {}
+
+  &-light {}
+
+  &-dark {}
+}
+
+
+
+
+
+
+
+
+
+
+$fontSizer: (10,
+  12,
+  13,
+  14,
+  15,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  35,
+  36,
+  38,
+  40,
+  42,
+  44,
+  45,
+  50,
+  60,
+  70,
+  80,
+  200,
+  240, 250);
+
+$fontWeight: (100, 300, 400, 500, 600, 700, 900);
+
+@each $fontsize in $fontSizer {
+  .fz-#{$fontsize} {
+    font-size: #{$fontsize}px !important;
+  }
+
+  .rounded-#{$fontsize} {
+    border-radius: #{$fontsize}px !important;
+  }
+}
+
+@each $fontweight in $fontWeight {
+  .fw-#{$fontweight} {
+    font-weight: #{$fontweight} !important;
+  }
+}
+
+$liftSizer: (0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  10,
+  20,
+  30,
+  40,
+  50,
+  60,
+  70,
+  80,
+  90,
+  100,
+  200,
+  300,
+  400,
+  500,
+  1000,
+  2000,
+  3000,
+  4000,
+  5000);
+
+@each $lift in $liftSizer {
+  .lift-#{$lift} {
+    z-index: #{$lift} !important;
+  }
+}
+
+$spacers: () !default;
+$spacers: map-merge((1r: 0.25rem,
+    2r: 0.5rem,
+    3r: 0.75rem,
+    4r: 1rem,
+    5r: 1.25rem,
+    6r: 1.5rem,
+    7r: 1.75rem,
+    8r: 2rem,
+    9r: 2.25rem,
+    10r: 2.5rem,
+    11r: 2.75rem,
+    12r: 3rem,
+    4: 4px,
+    8: 8px,
+    12: 12px,
+    16: 16px,
+    20: 20px,
+    24: 24px,
+    32: 32px,
+    36: 36px,
+    40: 40px,
+    48: 48px,
+    56: 56px,
+    64: 64px,
+    72: 72px,
+    80: 80px,
+    88: 88px,
+    96: 96px,
+    104: 104px,
+    112: 112px,
+    120: 120px,
+    136: 136px,
+    152: 152px),
+  $spacers);
+
+.vertical-middle {
+  vertical-align: middle;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+p:last-child {
+  margin-bottom: 0
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+@mixin transition($delay) {
+  transition: all ease $delay;
+}
