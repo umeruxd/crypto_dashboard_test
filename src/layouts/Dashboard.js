@@ -3,8 +3,9 @@ import { Switch, Redirect } from 'react-router-dom';
 import routes from 'routes';
 import HandlePageRoutes from 'routes/HandlePageRoutes';
 import Sidebar from 'components/Sidebar';
+import DashboardHeader from 'components/General/DashboardHeader';
 
-const PortalLayout = () => {
+const DashboardLayout = () => {
   const isAuthenticated = true;
   let routeFragment = null;
   // Redirected if not loggedin
@@ -15,14 +16,15 @@ const PortalLayout = () => {
       </Switch>
     );
   } else {
-    // Show portal routes
-    routeFragment = <Switch>{HandlePageRoutes(routes, 'portal')}</Switch>;
+    // Show dashboard routes
+    routeFragment = <Switch>{HandlePageRoutes(routes, 'dashboard')}</Switch>;
   }
   return (
     <div className="main d-flex align-items-stretch">
       <Sidebar />
       <div id="content">
         <div className="h-100 full-height-min rounded-inner">
+          <DashboardHeader />
           {routeFragment}
         </div>
       </div>
@@ -30,4 +32,4 @@ const PortalLayout = () => {
   );
 };
 
-export default PortalLayout;
+export default DashboardLayout;

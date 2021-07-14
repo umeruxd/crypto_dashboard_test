@@ -1,0 +1,32 @@
+@import 'static/scss/_variables';
+
+.search {
+    &-wrap {
+        position: relative;
+        width: 366px;
+        max-width: 94%;
+
+        .search-group,
+        .form-control {
+            margin-bottom: 0;
+            border-radius: 4rem;
+            border: 0;
+            background: $blue-1;
+            color:#FFF;
+            height: 40px;
+            color: $blue-3;
+            box-shadow: none;
+
+            &::placeholder {
+                color: $blue-3;
+            }
+        }
+
+        svg {
+            margin:0 1rem;
+            path {
+                fill: $blue-3;
+            }
+        }
+    }
+}

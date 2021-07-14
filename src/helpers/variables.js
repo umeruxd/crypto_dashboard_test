@@ -6,4 +6,6 @@ export const success = {
   save: name => `${name} has been saved successfully`
 };
 
-export const theme = {};
+export const theme = {
+  danger: '#ff6980'
+};

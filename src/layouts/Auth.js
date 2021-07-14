@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 const Pages = () => {
   const isAuthenticated = true;
   let routeFragment = null;
-  // Redirect to portal if loggedin
+  // Redirect to dashboard if loggedin
   if (isAuthenticated) {
     routeFragment = (
       <Switch>

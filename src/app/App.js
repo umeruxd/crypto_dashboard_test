@@ -1,7 +1,7 @@
 import 'static/scss/main.scss';
 import React, { Fragment } from 'react';
 import { Redirect, Route, Switch, useLocation } from 'react-router-dom';
-import PortalLayout from 'layouts/Portal';
+import DashboardLayout from 'layouts/Dashboard';
 import NotFound from 'pages/errors/404';
 import ProtectedRoute from 'routes/ProtectedRoute';
 import routes from 'routes';
@@ -10,8 +10,8 @@ import { matchDynamicRoute } from 'helpers/generic.methods';
 const App = () => {
   const location = useLocation();
 
-  /* Map all the portal related protected route with auth guard */
-  const portalPagesRoutes = routes.map((route, key) => {
+  /* Map all the dashboard related protected route with auth guard */
+  const dashboardPagesRoutes = routes.map((route, key) => {
     // check if route has a collapsible property and
     // map through all the sub navigation if exist
     if (route.collapsable && route.path !== location.pathname) {
@@ -27,7 +27,7 @@ const App = () => {
               return (
                 <ProtectedRoute
                   path={route.path}
-                  component={PortalLayout}
+                  component={DashboardLayout}
                   key={'parent-' + index}
                 />
               );
@@ -43,7 +43,7 @@ const App = () => {
       return (
         <ProtectedRoute
           path={route.path}
-          component={PortalLayout}
+          component={DashboardLayout}
           key={'parent-' + key}
         />
       );
@@ -56,8 +56,8 @@ const App = () => {
         {/* remove slash from the end of url  */}
         <Redirect from="/:url*(/+)" to={location.pathname.slice(0, -1)} />
 
-        {/* authenticated/portal routes */}
-        {portalPagesRoutes}
+        {/* authenticated/dashboard routes */}
+        {dashboardPagesRoutes}
 
         {/* 404 route */}
         <Route component={NotFound} />

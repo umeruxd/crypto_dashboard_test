@@ -15,7 +15,7 @@ const DashboardRoutes = [
     path: '/',
     name: 'Analytics',
     component: Analytics,
-    icon: <AnalyticsIcon class="sidebar-icon" />,
+    icon: <AnalyticsIcon className="sidebar-icon" />,
     exact: true
   },
 

@@ -1,0 +1,25 @@
+@import 'static/scss/_variables';
+
+.notification {
+    &-wrap {
+        position: relative;
+        width: 22px;
+        svg {
+            path {
+                fill: $blue-3
+            }
+        }
+    }
+
+    &-dot {
+        background-color: $danger;
+        border-radius: 100%;
+        width: 13px;
+        height: 13px;
+        display: block;
+        right: 0;
+        position: absolute;
+        top: 0;
+        border: 3px solid #2c3254;
+    }
+}

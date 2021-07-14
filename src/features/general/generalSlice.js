@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 export const generalReducer = createSlice({
   name: 'general',
   initialState: {
-    example: null
+    example: null,
+    hasNotification: true
   },
   reducers: {
     exaple: () => {
@@ -12,15 +13,19 @@ export const generalReducer = createSlice({
   }
 });
 export const { exaple } = generalReducer.actions;
-export const exampleAsync = ref => dispatch => {
+export const searchCall = ref => dispatch => {
   /**
    * hide on clicked outside of the element
    */
-  return new Promise((resolve, reject) => {});
+  return new Promise((resolve, reject) => {
+    console.log(ref ? ref + ' search term' : 'type something');
+    return ref;
+  });
 };
 
 export const selectLangauge = state => {
   return state.general.example;
 };
+export const hasNotification = state => state.general.hasNotification;
 
 export default generalReducer.reducer;

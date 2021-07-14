@@ -25,7 +25,7 @@ const HandlePageRoutes = (routes, layout) => {
         return (
           <Route path={route.path} component={route.component} key={key} />
         );
-      } else if (layout === 'portal') {
+      } else if (layout === 'dashboard') {
         return (
           <ProtectedRoute
             path={route.path}
