@@ -12,7 +12,7 @@ const DashboardHeader = () => {
           <Search />
         </div>
         <div className="col">
-          <div className="row justify-content-end align-items-center">
+          <div className="row justify-content-end align-items-center no-gutters">
             <Notifications />
             <Profile />
           </div>

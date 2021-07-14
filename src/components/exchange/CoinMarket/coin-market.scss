@@ -1,0 +1,36 @@
+@import 'static/scss/_variables';
+
+.react-tabs {
+    &__tab {
+        bottom: 0;
+        margin-right: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+        border: 0;
+        color: $blue-3;
+
+        &--selected {
+            background: transparent;
+            border-bottom: 4px solid $blue-2;
+            color: #FFF;
+        }
+
+        &-list {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.coin-market-table {
+    margin-bottom: 0;
+
+    td {
+        vertical-align: middle;
+        border: 0;
+    }
+
+    .table-icon {
+        width: 2rem;
+    }
+}

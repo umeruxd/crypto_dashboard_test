@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Analytics = props => {
+const ICOListIcon = props => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +18,4 @@ const Analytics = props => {
   );
 };
 
-export default Analytics;
+export default ICOListIcon;

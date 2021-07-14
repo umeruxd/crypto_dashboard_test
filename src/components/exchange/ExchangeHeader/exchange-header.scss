@@ -1,0 +1,18 @@
+@import 'static/scss/_variables';
+
+.arrow-icon {
+    &-down {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.balance-head {
+    color: $blue-3;
+    font-size: 13px;
+}
+
+.balance {
+    text-transform: uppercase;
+}
