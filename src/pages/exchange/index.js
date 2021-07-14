@@ -2,6 +2,8 @@ import React from 'react';
 import ExchangeHeader from 'components/exchange/ExchangeHeader';
 import CoinMarket from 'components/exchange/CoinMarket';
 import BuySellForm from 'components/exchange/BuySellForm';
+import TransactionHistory from 'components/exchange/TransactionHistory';
+import Stats from 'components/exchange/Stats';
 
 const Exchange = () => {
   return (
@@ -15,7 +17,9 @@ const Exchange = () => {
         </div>
         <div className="container-fluid">
           <div className="row">
-            <div className="col-xl-8 col-12"></div>
+            <div className="col-xl-8 col-12">
+              <Stats />
+            </div>
             <div className="col-xl-4 col-12">
               <CoinMarket />
             </div>
@@ -26,6 +30,11 @@ const Exchange = () => {
             </div>
             <div className="col-xl-6 col-12">
               <BuySellForm type="sell" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <TransactionHistory />
             </div>
           </div>
         </div>

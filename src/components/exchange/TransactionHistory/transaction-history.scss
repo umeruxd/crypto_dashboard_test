@@ -1,0 +1,61 @@
+@import 'static/scss/_variables';
+
+.table {
+    thead th {
+        border-top: 0;
+        color: $blue-3;
+        font-weight: 500;
+        border-bottom-color: $blue-1;
+    }
+
+    td {
+        border-top-color: $blue-1;
+
+    }
+
+    tr {
+        &:last-child {
+            td {
+                border-bottom: 1px solid $blue-1
+            }
+        }
+    }
+}
+
+.transaction-history .fixed-width {
+    width: 110px;
+    font-size: 14px;
+}
+
+
+.pagination {
+    margin-bottom: 0;
+    background: $primary;
+    border-radius: 5rem;
+    padding: 0 1.25rem 0 0.75rem;
+
+    .page-link {
+        padding: 5px 0.75rem;
+        background: transparent;
+        border: 0;
+        color: $blue-3;
+    }
+
+    li {
+        &.active {
+            .page-link {
+                color: $blue-2
+            }
+        }
+    }
+
+}
+
+.page-next.circle {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 3px;
+    margin-left: -24px;
+}
